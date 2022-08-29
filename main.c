@@ -22,12 +22,11 @@ void print_custom_syslogs() {
 };
 
 int main() {
-    print_custom_syslogs();
+    while(1) {
+        print_custom_syslogs();
 
-    print_security_events();
+        print_security_events();
 
-    print_cron_jobs();
-
-    return 0;
-
+        print_cron_jobs();
+    }
 }
