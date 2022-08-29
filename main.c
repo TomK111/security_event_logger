@@ -6,18 +6,18 @@
 void print_security_events() {
     system("cd ../../../");
     system("sudo cat /var/log/auth.log >> security_logs.txt");
-    system("watch -d");
 };
 
 void print_cron_jobs() {
-    system("cd ../../../ && cat /var/log/syslog | grep \"CRON\" ");
+    system("cd ../../../");
     system("sudo cat var/log/syslog | grep \"CRON\" >> cron_logs.txt");
 };
 
 void print_custom_syslogs() {
-    system("cd ../../../ && cat /var/log/syslog | grep -v \"kernel\" ");
+    system("cd ../../../");
     system("sudo cat /var/log/syslog | grep -v \"kernel\" >> custom_syslogs.txt");
 };
+
 
 int main() {
         print_security_events();
